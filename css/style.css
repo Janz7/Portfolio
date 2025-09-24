@@ -78,7 +78,6 @@ nav ul li a {
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0px 240px;
 }
 
 .grid-intro {
@@ -98,10 +97,8 @@ main {
   background-image: url(../src/elipse.svg);
   background-size: 15px 15px;
   background-repeat: no-repeat;
-}
-
-.teste {
-  align-items: center;
+  align-self: center;
+  margin-bottom: 50px;
 }
 
 
@@ -125,7 +122,7 @@ main {
 .info-localizacao {
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
+  align-items: center;
   gap: 20px;
 }
 
@@ -166,6 +163,7 @@ main {
   font-family: "IBM Plex Sans", Arial, sans-serif;
   margin-top: 160px;
   grid-column: 1/-1;
+  padding: 0px 240px;
   /* justify-items: center; */
 }
 
@@ -266,6 +264,178 @@ p {
   align-self: center;
 }
 
+.formacao-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 40px;
+  margin-top: 160px;
+  grid-column: 1/-1;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  background-color: #171827;
+  padding: 0px 240px;
+  padding-top: 140px;
+}
+
+.formacao-grid-column-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  grid-column: 2/-1;
+}
+
+.apoio-formacao {
+  font-size: 6rem;
+  line-height: 6.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #28283D;
+}
+
+.descricao-formacao {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  max-width: 50ch;
+  margin-top: 10px;
+  color: #BFC0C2;
+}
+
+.card-formacao {
+  background-color: #28283D;
+  padding-top: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 35px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.card-formacao::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(#A061CA, #5E1597);
+  border-radius: 50%;
+  top: 50px;
+  left: -100px;
+}
+
+.card-formacao h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #F7F7F7;
+}
+
+.instituicao-formacao {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: #D2D2D2;
+  font-weight: 600;
+}
+
+.flex-card-formacao {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.data-formacao {
+  align-self: center;
+}
+
+.instituicao-formacao {
+  margin-top: 16px;
+  margin-left: 20px;
+}
+
+.data-formacao {
+  font-size: 1.25rem;
+  color: #BFC0C2;
+  font-weight: 500;
+}
+
+.formacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  margin-top: 60px;
+}
+
+.ultimo {
+  position: relative;
+}
+
+.ultimo::after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-image: url(../src/setagoogle.svg);
+  background-repeat: no-repeat;
+  top: -50px;
+  left: -104px;
+}
+
+footer {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  background-color: #000000;
+  justify-items: center;
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+footer p {
+  color: #BFC0C2;
+  font-size: 1.75rem;
+  line-height: 2.625rem;
+  font-weight: 400;
+  align-self: center;
+}
+
+.copyright {
+  color: #575A70;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-left: 55px;
+  margin-top: 110px;
+}
+
+footer ul li a {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #F7F7F7;
+  position: relative;
+}
+
+.lista-contatos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+footer ul li a::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 22px;
+  background-color: #5E1597;
+  top: 13px;
+  left: -15px;
+}
+
+footer ul li a::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 22px;
+  background-color: #A061CA;
+  top: 13px;
+  left: -12px;
+}
 
 @media (max-width: 1280px) {
   .logo {
@@ -274,5 +444,129 @@ p {
 
   nav ul li a {
     font-size: 1rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-intro {
+    margin-top: 80px;
+    padding: 0px 140px;
+  }
+
+  .grid-intro-column-2 h2{
+    font-size: 2.5rem;
+  }
+
+  .grid-intro-column-2 h3{
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    margin-top: 15px;
+  }
+
+  .grid-intro section h1 {
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+  }
+
+  .info-localizacao h4 {
+    font-size: 1.2rem;
+    color: #3C3E55;
+  }
+
+  .grid-intro-column-2::after {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 2px;
+    background-color: #A061CA;
+    position: absolute;
+    bottom: -35%;
+    left: 30%;
+  }
+
+  .grid-exp {
+  margin-top: 160px;
+  padding: 0px 140px;
+  }
+
+  .formacao-grid {
+    padding: 140px 140px;
+  }
+  
+  .descricao-formacao {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    font-weight: 400;
+  }
+
+  .apoio-formacao {
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+
+  .apoio-exp {
+    font-size: 5rem;
+    line-height: 5.5rem;
+  }
+
+  .card-formacao h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #F7F7F7;
+  }
+
+  .instituicao-formacao {
+    font-size: 0.9rem;
+    line-height: 2.25rem;
+    color: #D2D2D2;
+    font-weight: 600;
+  }
+
+  .data-formacao {
+    font-size: 0.9rem;
+    color: #BFC0C2;
+    font-weight: 500;
+  }
+
+  .elipse-detalhe {
+    width: 10px;
+    height: 10px;
+    background-size: 10px 10px;
+    justify-self: start;
+  }
+
+  .card-formacao::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(#A061CA, #5E1597);
+    border-radius: 50%;
+    top: 55px;
+    left: -100px;
+  }
+
+  footer p {
+    color: #BFC0C2;
+    font-size: 1.25rem;
+    line-height: 1.8rem;
+    max-width: 25ch;
+    font-weight: 400;
+  }
+
+  .copyright {
+    color: #575A70;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 60px;
+  }
+
+  footer ul li {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #F7F7F7;
   }
 }
