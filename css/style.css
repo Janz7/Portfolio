@@ -49,7 +49,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 30px clamp(16px, 5vw, 240px);
+  padding: 30px clamp(40px, 5vw, 240px);
   background-color: #ffffff;
   box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.1);
 }
@@ -88,10 +88,12 @@ main {
   grid-template-columns: 1fr 50px 1fr;
   /* justify-items: center; */
   align-items: center;
-  margin-top: 125px;
   grid-column: 1/-1;
   position: relative;
-  padding: 30px clamp(16px, 5vw, 240px);
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-top: 125px;
+  gap: 100px;
 }
 
 .elipse-detalhe {
@@ -167,7 +169,8 @@ main {
   font-family: "IBM Plex Sans", Arial, sans-serif;
   margin-top: 160px;
   grid-column: 1/-1;
-  padding: 30px clamp(16px, 5vw, 240px);
+  padding-left: 140px;
+  padding-right: 140px;
   /* justify-items: center; */
 }
 
@@ -268,6 +271,8 @@ p {
   align-self: center;
 }
 
+
+
 .formacao-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; 
@@ -276,10 +281,9 @@ p {
   grid-column: 1/-1;
   font-family: 'IBM Plex Sans', Arial, sans-serif;
   background-color: #171827;
-  padding: 30px clamp(16px, 5vw, 240px);
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding: 140px;
 }
+
 
 .formacao-grid-column-2 {
   display: flex;
@@ -389,9 +393,11 @@ footer {
   font-family: 'IBM Plex Sans', Arial, sans-serif;
   background-color: #000000;
   justify-items: center;
-  padding: 30px clamp(16px, 5vw, 240px);
+  padding: 30px clamp(40px, 5vw, 240px);
   padding-top: 120px;
   padding-bottom: 60px;
+  max-width: 1600px;
+  margin: 0 auto;
   
 }
 
@@ -448,7 +454,7 @@ footer ul li a::after {
 @media (max-width: 1450px) {
 
   header {
-    padding: 30px clamp(16px, 5vw, 240px);
+    padding: 30px clamp(40px, 5vw, 240px);
   }
 
   .logo {
@@ -466,7 +472,7 @@ footer ul li a::after {
 
   .grid-intro {
     margin-top: 80px;
-    padding: 30px clamp(16px, 5vw, 240px);
+    padding: 30px clamp(40px, 5vw, 240px);
   }
 
   .grid-intro-column-2 h2{
@@ -502,13 +508,12 @@ footer ul li a::after {
 
   .grid-exp {
     margin-top: 160px;
-    padding: 30px clamp(16px, 5vw, 240px);
+    padding-left: 140px;
+    padding-right: 140px;
   }
 
   .formacao-grid {
-    padding: 30px clamp(16px, 5vw, 240px);
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding: 140px;
   }
   
   .descricao-formacao {
@@ -653,7 +658,7 @@ footer ul li a::after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px clamp(16px, 5vw, 240px);
+    padding: 30px clamp(40px, 5vw, 240px);
     gap: 60px;
   }
 
@@ -683,8 +688,15 @@ footer ul li a::after {
 }
 
 @media (max-width: 850px) {
+
+  .grid-intro {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
   .grid-exp {
     grid-template-columns: 1fr;
+    margin-top: 0px;
   }
 
   .apoio-exp {
@@ -766,7 +778,7 @@ footer ul li a::after {
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 100px;
-    padding: 30px clamp(16px, 5vw, 240px);
+    padding: 30px clamp(40px, 5vw, 240px);
     padding-top: 60px;
     padding-bottom: 40px;
   }
@@ -820,5 +832,23 @@ footer ul li a::after {
     background-color: #A061CA;
     top: 5px;
     left: -12px;
+  }
+}
+
+@media (max-width: 560px){
+  .grid-intro{
+    padding: 30px clamp(40px, 5vw, 240px);
+  }
+
+  .grid-exp {
+    padding: 30px clamp(40px, 5vw, 240px);
+  }
+
+  .formacao-grid {
+    padding: 30px clamp(40px, 5vw, 240px);
+  }
+
+  footer {
+    padding: 30px clamp(40px, 5vw, 240px);
   }
 }
