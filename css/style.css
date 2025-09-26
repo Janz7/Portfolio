@@ -4,6 +4,7 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: #f7f7f7;
+  width: 100%;
 }
 
 h1,
@@ -33,12 +34,14 @@ img {
 }
 
 .logo {
-  max-width: 250px;
+  width: clamp(170px, 20vw, 200px);
+
 }
 
 .logo img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: flex;
 }
 
 header {
@@ -46,7 +49,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 240px;
+  padding: 30px clamp(16px, 5vw, 240px);
   background-color: #ffffff;
   box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.1);
 }
@@ -88,7 +91,7 @@ main {
   margin-top: 125px;
   grid-column: 1/-1;
   position: relative;
-  padding: 0px 240px;
+  padding: 30px clamp(16px, 5vw, 240px);
 }
 
 .elipse-detalhe {
@@ -164,7 +167,7 @@ main {
   font-family: "IBM Plex Sans", Arial, sans-serif;
   margin-top: 160px;
   grid-column: 1/-1;
-  padding: 0px 240px;
+  padding: 30px clamp(16px, 5vw, 240px);
   /* justify-items: center; */
 }
 
@@ -273,7 +276,7 @@ p {
   grid-column: 1/-1;
   font-family: 'IBM Plex Sans', Arial, sans-serif;
   background-color: #171827;
-  padding: 0px 240px;
+  padding: 30px clamp(16px, 5vw, 240px);
   padding-top: 140px;
   padding-bottom: 140px;
 }
@@ -386,10 +389,10 @@ footer {
   font-family: 'IBM Plex Sans', Arial, sans-serif;
   background-color: #000000;
   justify-items: center;
+  padding: 30px clamp(16px, 5vw, 240px);
   padding-top: 120px;
   padding-bottom: 60px;
-  padding-left: 240px;
-  padding-right: 240px;
+  
 }
 
 footer p {
@@ -445,7 +448,7 @@ footer ul li a::after {
 @media (max-width: 1450px) {
 
   header {
-    padding: 30px 140px;
+    padding: 30px clamp(16px, 5vw, 240px);
   }
 
   .logo {
@@ -463,7 +466,7 @@ footer ul li a::after {
 
   .grid-intro {
     margin-top: 80px;
-    padding: 0px 140px;
+    padding: 30px clamp(16px, 5vw, 240px);
   }
 
   .grid-intro-column-2 h2{
@@ -498,12 +501,14 @@ footer ul li a::after {
   }
 
   .grid-exp {
-  margin-top: 160px;
-  padding: 0px 140px;
+    margin-top: 160px;
+    padding: 30px clamp(16px, 5vw, 240px);
   }
 
   .formacao-grid {
-    padding: 140px 140px;
+    padding: 30px clamp(16px, 5vw, 240px);
+    padding-top: 140px;
+    padding-bottom: 140px;
   }
   
   .descricao-formacao {
@@ -579,6 +584,26 @@ footer ul li a::after {
     line-height: 2rem;
     color: #F7F7F7;
   }
+
+  footer ul li a::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 22px;
+    background-color: #5E1597;
+    top: 5px;
+    left: -15px;
+  }
+
+  footer ul li a::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 22px;
+    background-color: #A061CA;
+    top: 5px;
+    left: -12px;
+  }
 }
 
 @media (max-width: 1100px){
@@ -602,10 +627,11 @@ footer ul li a::after {
     grid-template-columns: 1fr;
     /* justify-items: center; */
     align-items: center;
-    margin-top: 125px;
+    text-align: center;
     grid-column: 1/-1;
     position: relative;
-    padding: 0px 240px;
+    padding: 0;
+    margin: 125px auto;
     gap: 180px;
   }
 
@@ -626,11 +652,8 @@ footer ul li a::after {
   header {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: center;
-    padding: 30px 240px;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.1);
+    padding: 30px clamp(16px, 5vw, 240px);
     gap: 60px;
   }
 
@@ -656,5 +679,146 @@ footer ul li a::after {
     color: #dec9e5;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .grid-exp {
+    grid-template-columns: 1fr;
+  }
+
+  .apoio-exp {
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 5.5rem;
+    color: #E4E4E4;
+    justify-self: center;
+  }
+
+  .experiencias {
+    grid-column: 1/-1;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    margin-top: 90px;
+  }
+
+  .formacao-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 40px;
+    margin-top: 160px;
+    grid-column: 1/-1;
+  }
+
+  .formacao-grid-column-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    grid-column: 1/-1;
+  }
+
+  .apoio-formacao {
+    font-size: 5rem;
+    line-height: 5.5rem;
+    justify-self: center;
+  }
+
+  .descricao-formacao {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    font-weight: 400;
+    max-width: 50ch;
+    margin-top: 10px;
+  }
+
+  .card-formacao {
+    background-color: #28283D;
+    padding-top: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 35px;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .card-formacao::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: linear-gradient(#A061CA, #5E1597);
+    border-radius: 50%;
+    top: 58px;
+    left: -70px;
+  }
+
+  .ultimo::after {
+    top: -70px;
+    left: -78px;
+  }
+
+  footer {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 100px;
+    padding: 30px clamp(16px, 5vw, 240px);
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  footer p {
+    color: #BFC0C2;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    font-weight: 400;
+    align-self: center;
+    text-align: center;
+    max-width: 25ch;
+  }
+
+  .copyright {
+    color: #575A70;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-left: 0;
+    margin-top: 0px;
+  }
+
+  footer ul li {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: #F7F7F7;
+    position: relative;
+  }
+
+  .lista-contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  footer ul li a::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 22px;
+    background-color: #5E1597;
+    top: 5px;
+    left: -15px;
+  }
+
+  footer ul li a::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 22px;
+    background-color: #A061CA;
+    top: 5px;
+    left: -12px;
   }
 }
