@@ -90,10 +90,10 @@ main {
   align-items: center;
   grid-column: 1/-1;
   position: relative;
-  max-width: 1600px;
+  max-width: 1440px;
   margin: 0 auto;
   margin-top: 125px;
-  gap: 100px;
+  gap: 140px;
 }
 
 .elipse-detalhe {
@@ -167,11 +167,12 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   font-family: "IBM Plex Sans", Arial, sans-serif;
-  margin-top: 160px;
   grid-column: 1/-1;
-  padding-left: 140px;
-  padding-right: 140px;
-  /* justify-items: center; */
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: clamp(0px, 20vw, 400px);
+  padding-bottom: 180px;
+  padding-top: 180px;
 }
 
 p {
@@ -185,6 +186,7 @@ p {
   line-height: 6.6rem;
   color: #E4E4E4;
   justify-self: start;
+  grid-column: 1/1;
 }
 
 .experiencias {
@@ -271,17 +273,23 @@ p {
   align-self: center;
 }
 
-
+.background-formacao {
+  grid-column: 1/-1;
+  background-color: #171827;
+  width: 100%;
+}
 
 .formacao-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; 
   gap: 40px;
-  margin-top: 160px;
   grid-column: 1/-1;
   font-family: 'IBM Plex Sans', Arial, sans-serif;
   background-color: #171827;
-  padding: 140px;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 160px;
+  padding-bottom: 140px;
 }
 
 
@@ -386,6 +394,11 @@ p {
   left: -104px;
 }
 
+.background-footer {
+  width: 100%;
+  background-color: #000000;
+}
+
 footer {
   grid-column: 1/-1;
   display: grid;
@@ -414,7 +427,7 @@ footer p {
   color: #575A70;
   font-size: 1.5rem;
   font-weight: 400;
-  margin-left: 55px;
+  margin-left: 20px;
   margin-top: 110px;
 }
 
@@ -451,7 +464,7 @@ footer ul li a::after {
   left: -12px;
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1550px) {
 
   header {
     padding: 30px clamp(40px, 5vw, 240px);
@@ -507,7 +520,7 @@ footer ul li a::after {
   }
 
   .grid-exp {
-    margin-top: 160px;
+    padding-top: 100px;
     padding-left: 140px;
     padding-right: 140px;
   }
@@ -582,6 +595,7 @@ footer ul li a::after {
     font-size: 1.2rem;
     font-weight: 400;
     margin-top: 60px;
+    margin-left: 55px;
   }
 
   footer ul li {
@@ -850,5 +864,11 @@ footer ul li a::after {
 
   footer {
     padding: 30px clamp(40px, 5vw, 240px);
+    padding-top: 100px;
+  }
+
+  .grid-intro-column-2::after {
+    bottom: -60px;
+    left: 27%;
   }
 }
